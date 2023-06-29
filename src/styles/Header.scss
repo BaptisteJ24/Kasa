@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 40px 100px;
+  }
+
+  &__logo {
+    width: 147px;
+    @media screen and (min-width: 768px) {
+      width: unset;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media screen and (min-width: 768px) {
+      gap: 60px;
+    }
+  }
+
+  &__link {
+    color: #ff6060;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      text-transform: unset;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
