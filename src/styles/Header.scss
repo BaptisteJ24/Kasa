@@ -20,6 +20,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    // todo clean test color background
+    background-color: $color-test;
     @media screen and (min-width: 768px) {
       gap: 60px;
     }
