@@ -1,0 +1,22 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 20px 30px;
+  max-width: 1023px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto 30px;
+    width: 70%;
+  }
+
+  &__banner {
+    background: url('../assets/about_page_banner.png') no-repeat center/cover;
+  }
+
+  &__dropdown {
+    font-size: 24px;
+  }
+}

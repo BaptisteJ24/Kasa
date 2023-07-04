@@ -1,7 +1,7 @@
-import React from 'react';
-import '../../styles/Home.scss';
+import React, { useEffect } from 'react';
 import Gallery from '../../components/Gallery';
-import { useEffect } from 'react';
+import Banner from '../../components/Banner';
+import '../../styles/Home.scss';
 
 function Home() {
   useEffect(() => {
@@ -10,9 +10,7 @@ function Home() {
 
   return (
     <React.Fragment>
-      <section className="home-banner">
-        <h1 className="home-banner__title">Chez vous, partout et ailleurs</h1>
-      </section>
+      <Banner title="Chez vous, partout et ailleurs" page="home" />
       <section className="housing">
         <Gallery />
       </section>

@@ -1,12 +1,18 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import './styles/variables.scss';
+import './styles/functions.scss';
+import './styles/mixins.scss';
+import './styles/reset.scss';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Error from './pages/Error';
 import Housing from './pages/Housing';
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-import './styles/main.scss';
 
 const App = () => {
   return (

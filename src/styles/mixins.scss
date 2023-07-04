@@ -1,0 +1,49 @@
+// mixin for breakpoint
+
+@mixin mobile-only {
+  @media screen and (max-width: calc(map-get($breakpoint, tablet) - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoint, tablet)) and (max-width: calc(map-get($breakpoint, desktop) - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet-and-more {
+  @media screen and (min-width: map-get($breakpoint, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoint, desktop)) and (max-width: calc(map-get($breakpoint, large-screen) - 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop-and-more {
+  @media screen and (min-width: map-get($breakpoint, desktop)) {
+    @content;
+  }
+}
+
+@mixin large-screen-only {
+  @media screen and (min-width: map-get($breakpoint, large-screen)) and (max-width: calc(map-get($breakpoint, extra-large-screen) - 1px)) {
+    @content;
+  }
+}
+
+@mixin large-screen-and-more {
+  @media screen and (min-width: map-get($breakpoint, large-screen)) {
+    @content;
+  }
+}
+
+@mixin extra-large-screen-only {
+  @media screen and (min-width: map-get($breakpoint, extra-large-screen)) {
+    @content;
+  }
+}

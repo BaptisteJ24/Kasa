@@ -24,9 +24,7 @@
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
-        color: #ffffff;
-        font-size: 18px;
-        font-weight: 500;
+        color: #fff;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
     }
@@ -56,22 +54,65 @@
     }
   }
 
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__main-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__other-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   &__title {
     color: #ff6060;
     font-size: 36px;
     font-weight: 500;
+    margin-bottom: 5px;
   }
 
   &__location {
     color: #ff6060;
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 20px;
   }
 
   &__host {
+    display: flex;
+    align-items: center;
     color: #ff6060;
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 10px;
+
+    &-name {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: right;
+    }
+
+    &-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 64px;
+      margin-left: 10px;
+      object-fit: cover;
+      object-position: center;
+      &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 64px;
+      }
+    }
   }
 
   &__rating {
@@ -80,7 +121,7 @@
 
     &-star {
       color: #e3e3e3;
-      font-size: 18px;
+      font-size: 24px;
       width: 36px;
       height: 36px;
       line-height: 36px;
@@ -94,18 +135,31 @@
   &__tags {
     display: flex;
     gap: 10px;
+    margin-bottom: 10px;
   }
 
   &__tag {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 30px;
+    min-width: 115px;
+    padding: 5px 10px;
+    height: 25px;
     border-radius: 15px;
     background-color: #ff6060;
     color: #ffffff;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  &__dropdowns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  &__dropdown {
+    width: 45%;
   }
 }
