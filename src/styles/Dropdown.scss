@@ -1,7 +1,11 @@
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
 .dropdown {
   width: 100%;
   position: relative;
-  font-size: 18px;
+  font-size: map-get($font-size, 18px);
 
   &[data-active='true'] {
     .dropdown__description {
@@ -13,28 +17,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff6060;
-    font-weight: 500;
-    color: #fff;
-    height: 52px;
+    background-color: get-color('color-primary');
+    color: get-color('color-secondary');
+    height: 30px;
     border-radius: 5px;
     padding: 0 20px;
+    font-size: map-get($font-size, 13px);
+
+    @include tablet-and-more {
+      font-size: map-get($font-size, 18px);
+      height: 52px;
+    }
   }
 
   &__chevron {
-    font-size: 24px;
+    font-size: map-get($font-size, 18px);
+
+    @include tablet-and-more {
+      font-size: map-get($font-size, 24px);
+    }
   }
 
   &__description {
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: get-color('color-tertiary');
     border-radius: 5px;
     padding: 20px;
-    color: #ff6060;
+    color: get-color('color-primary');
+    font-size: map-get($font-size, 12px);
     font-weight: 400;
     line-height: 1.5;
     position: absolute;
     top: -9999px;
     left: -9999px;
+
+    @include tablet-and-more {
+      font-size: map-get($font-size, 18px);
+    }
   }
 }

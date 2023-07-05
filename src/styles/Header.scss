@@ -1,3 +1,7 @@
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,13 +9,13 @@
   width: 100%;
   padding: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet-and-more {
     padding: 40px 100px;
   }
 
   &__logo {
     width: 147px;
-    @media screen and (min-width: 768px) {
+    @include tablet-and-more {
       width: unset;
     }
   }
@@ -20,18 +24,18 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    @media screen and (min-width: 768px) {
+    @include tablet-and-more {
       gap: 60px;
     }
   }
 
   &__link {
-    color: #ff6060;
-    font-size: 12px;
+    color: get-color('color-primary');
+    font-size: map-get($font-size, 12px);
     text-transform: uppercase;
 
-    @media screen and (min-width: 768px) {
-      font-size: 24px;
+    @include tablet-and-more {
+      font-size: map-get($font-size, 24px);
       text-transform: unset;
     }
 

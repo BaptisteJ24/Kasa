@@ -1,40 +1,46 @@
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
 .error {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 180px auto 0;
-  color: #ff6060;
+  color: get-color('color-primary');
 
   &__title {
-    font-size: 96px;
+    font-size: map-get($font-size, 96px);
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
-    @media screen and (min-width: 768px) {
-      font-size: 288px;
+
+    @include tablet-and-more {
+      font-size: map-get($font-size, 288px);
     }
   }
 
   &__text {
-    font-size: 18px;
+    font-size: map-get($font-size, 18px);
     font-weight: 500;
     text-align: center;
-    margin-bottom: 130px;
-    @media screen and (min-width: 768px) {
-      font-size: 36px;
+    margin: 0 50px 130px;
+
+    @include tablet-and-more {
+      font-size: map-get($font-size, 36px);
     }
   }
 
   &__link {
     text-decoration: underline;
-    color: #ff6060;
-    font-size: 14px;
+    color: get-color('color-primary');
+    font-size: map-get($font-size, 14px);
     text-align: center;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 768px) {
-      font-size: 18px;
+    @include tablet-and-more {
+      font-size: map-get($font-size, 18px);
     }
   }
 }

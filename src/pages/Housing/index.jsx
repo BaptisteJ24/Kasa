@@ -40,9 +40,9 @@ const Housing = () => {
     return (
       <section className="housing">
         <Carousel
-          className="housing__carousel"
           pictures={housingData.pictures}
           altText={housingData.title}
+          page="housing"
         />
         <div className="housing__details">
           <div className="housing__main-details">
@@ -75,13 +75,11 @@ const Housing = () => {
         </div>
         <div className="housing__dropdowns">
           <Dropdown
-            className="housing__description"
             page="housing"
             name="Description"
             value={housingData.description}
           />
           <Dropdown
-            className="housing__equipments"
             page="housing"
             name="Équipements"
             value={housingData.equipments}

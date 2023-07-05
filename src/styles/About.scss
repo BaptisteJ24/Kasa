@@ -1,3 +1,6 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
 .about {
   display: flex;
   flex-direction: column;
@@ -7,7 +10,7 @@
   margin: 0 20px 30px;
   max-width: 1023px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet-and-more {
     margin: 0 auto 30px;
     width: 70%;
   }
@@ -17,6 +20,6 @@
   }
 
   &__dropdown {
-    font-size: 24px;
+    font-size: map-get($font-size, 24px);
   }
 }

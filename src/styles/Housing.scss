@@ -1,3 +1,7 @@
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
 .housing {
   display: flex;
   flex-direction: column;
@@ -5,59 +9,15 @@
   height: 100%;
   margin: 0 100px 30px;
 
-  &__carousel {
-    width: 100%;
-    height: 415px;
-    position: relative;
-    margin-bottom: 30px;
-
-    &__picture {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      overflow-clip-margin: unset;
-      border-radius: 25px;
-
-      &-index {
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    &__button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 50px;
-      height: 50px;
-      font-size: 79px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      color: #ffffff;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-      &--next {
-        right: 23px;
-      }
-      &--prev {
-        left: 23px;
-      }
-    }
-  }
-
   &__details {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @include tablet-and-more {
+      flex-direction: row;
+    }
   }
 
   &__main-details {
@@ -69,34 +29,31 @@
   &__other-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+
+    @include tablet-and-more {
+      align-items: flex-end;
+    }
   }
 
   &__title {
-    color: #ff6060;
-    font-size: 36px;
-    font-weight: 500;
+    color: get-color('color-primary');
+    font-size: map-get($font-size, 36px);
     margin-bottom: 5px;
   }
 
   &__location {
-    color: #ff6060;
-    font-size: 18px;
-    font-weight: 500;
+    color: get-color('color-primary');
     margin-bottom: 20px;
   }
 
   &__host {
     display: flex;
     align-items: center;
-    color: #ff6060;
-    font-size: 18px;
-    font-weight: 500;
+    color: get-color('color-primary');
     margin-bottom: 10px;
 
     &-name {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: map-get($font-size, 18px);
       text-align: right;
     }
 
@@ -120,14 +77,14 @@
     align-items: center;
 
     &-star {
-      color: #e3e3e3;
-      font-size: 24px;
+      color: get-color('color-quaternary');
+      font-size: map-get($font-size, 24px);
       width: 36px;
       height: 36px;
       line-height: 36px;
       text-align: center;
       &--active {
-        color: #ff6060;
+        color: get-color('color-primary');
       }
     }
   }
@@ -146,10 +103,9 @@
     padding: 5px 10px;
     height: 25px;
     border-radius: 15px;
-    background-color: #ff6060;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
+    background-color: get-color('color-primary');
+    color: get-color('color-secondary');
+    font-size: map-get($font-size, 14px);
   }
 
   &__dropdowns {

@@ -5,11 +5,11 @@ import { getData } from '../../utils/get';
 
 const housing = await getData('/data.json');
 
-const Gallery = () => {
+const Gallery = ({ page }) => {
   return (
-    <ul className="gallery">
+    <ul className={`gallery ${page}__gallery`}>
       {housing.map((item) => {
-        return <Card key={item.id} housing={item} />;
+        return <Card key={item.id} housing={item} page={page} />;
       })}
     </ul>
   );

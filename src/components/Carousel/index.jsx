@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import '../../styles/Carousel.scss';
 
-const Carousel = ({ pictures, altText, className }) => {
+const Carousel = ({ pictures, altText, page }) => {
   const [currentPicture, setCurrentPicture] = useState(0);
 
   const handleNext = () => {
@@ -16,28 +17,28 @@ const Carousel = ({ pictures, altText, className }) => {
   };
 
   return (
-    <div className={className}>
+    <div className={`carousel ${page}__carousel`}>
       <img
         src={pictures[currentPicture]}
         alt={altText}
-        className={`${className}__picture`}
+        className="carousel__picture"
       />
 
       {pictures.length > 1 && (
         <React.Fragment>
           <button
-            className={`${className}__button ${className}__button--prev`}
+            className="carousel__button carousel__button--prev"
             onClick={handlePrevious}
           >
             <i className="fas fa-chevron-left" />
           </button>
           <button
-            className={`${className}__button ${className}__button--next`}
+            className="carousel__button carousel__button--next"
             onClick={handleNext}
           >
             <i className="fas fa-chevron-right" />
           </button>
-          <p className={`${className}__picture-index`}>
+          <p className="carousel__picture-index">
             {currentPicture + 1}/{pictures.length}
           </p>
         </React.Fragment>

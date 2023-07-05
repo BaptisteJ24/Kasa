@@ -1,3 +1,7 @@
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
 .footer {
   display: flex;
   width: 100%;
@@ -11,16 +15,16 @@
   &__logo {
     width: 120px;
     height: auto;
-    fill: #fff;
+    fill: get-color('color-secondary');
   }
 
   &__text {
-    font-size: 12px;
-    color: #fff;
+    font-size: map-get($font-size, 12px);
+    color: get-color('color-secondary');
     text-align: center;
 
-    @media screen and (min-width: 425px) {
-      font-size: 24px;
+    @include tablet-and-more {
+      font-size: map-get($font-size, 24px);
     }
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/Dropdown.scss';
 
-const Dropdown = ({ className, name, value, page }) => {
+const Dropdown = ({ name, value, page }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -10,10 +10,7 @@ const Dropdown = ({ className, name, value, page }) => {
   };
 
   return (
-    <div
-      className={`dropdown ${page}__dropdown ${className ? className : ''}`}
-      data-active={isOpen}
-    >
+    <div className={`dropdown ${page}__dropdown`} data-active={isOpen}>
       <div
         className={`dropdown__title ${page}__dropdown__title`}
         onClick={toggleDropdown}
