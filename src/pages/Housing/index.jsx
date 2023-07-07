@@ -3,13 +3,14 @@ import { useParams } from 'react-router-dom';
 import Error from '../Error';
 import Carousel from '../../components/Carousel';
 import Dropdown from '../../components/Dropdown';
+import Loader from '../../components/Loader';
 import { getDataById } from '../../utils/get';
-import '../../styles/Housing.scss';
 
 const Housing = () => {
   const { housingId } = useParams();
   const [housingData, setHousingData] = useState(null);
   const [ratingStars, setRatingStars] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const createRatingStars = () => {
     return Array.from({ length: 5 }, (_, index) => (
@@ -31,64 +32,72 @@ const Housing = () => {
       } catch (error) {
         console.log('error', error);
         return <Error />;
+      } finally {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
       }
     };
     fetchData();
   }, [housingId]);
 
-  if (housingData && housingData.length !== 0) {
-    return (
-      <section className="housing">
-        <Carousel
-          pictures={housingData.pictures}
-          altText={housingData.title}
-          page="housing"
-        />
-        <div className="housing__details">
-          <div className="housing__main-details">
-            <h1 className="housing__title">{housingData.title}</h1>
-            <p className="housing__location">{housingData.location}</p>
-            <p className="housing__tags">
-              {housingData.tags.map((tag) => (
-                <span className="housing__tag" key={tag}>
-                  {tag}
-                </span>
-              ))}
-            </p>
-          </div>
-          <div className="housing__other-details">
-            <div className="housing__host">
-              <div className="housing__host-name">
-                <p>{housingData.host.name.split(' ')[0]}</p>
-                <p>{housingData.host.name.split(' ')[1]}</p>
-              </div>
-              <div className="housing__host-picture">
-                <img
-                  src={housingData.host.picture}
-                  alt={housingData.host.name + 'profile picture'}
-                  className="housing__host-picture__img"
-                />
-              </div>
-            </div>
-            <div className="housing__rating">{createRatingStars()}</div>
-          </div>
-        </div>
-        <div className="housing__dropdowns">
-          <Dropdown
-            page="housing"
-            name="Description"
-            value={housingData.description}
-          />
-          <Dropdown
-            page="housing"
-            name="Équipements"
-            value={housingData.equipments}
-          />
-        </div>
-      </section>
-    );
+  if (isLoading) {
+    return <Loader />;
   } else {
-    return <Error />;
+    if (housingData && housingData.length !== 0) {
+      return (
+        <section className="housing">
+          <Carousel
+            pictures={housingData.pictures}
+            altText={housingData.title}
+            page="housing"
+          />
+          <div className="housing__details">
+            <div className="housing__main-details">
+              <h1 className="housing__title">{housingData.title}</h1>
+              <p className="housing__location">{housingData.location}</p>
+              <p className="housing__tags">
+                {housingData.tags.map((tag) => (
+                  <span className="housing__tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </p>
+            </div>
+            <div className="housing__other-details">
+              <div className="housing__host">
+                <div className="housing__host-name">
+                  <p>{housingData.host.name.split(' ')[0]}</p>
+                  <p>{housingData.host.name.split(' ')[1]}</p>
+                </div>
+                <div className="housing__host-picture">
+                  <img
+                    src={housingData.host.picture}
+                    alt={housingData.host.name + 'profile picture'}
+                    className="housing__host-picture__img"
+                  />
+                </div>
+              </div>
+              <div className="housing__rating">{createRatingStars()}</div>
+            </div>
+          </div>
+          <div className="housing__dropdowns">
+            <Dropdown
+              page="housing"
+              name="Description"
+              value={housingData.description}
+            />
+            <Dropdown
+              page="housing"
+              name="Équipements"
+              value={housingData.equipments}
+            />
+          </div>
+        </section>
+      );
+    } else {
+      return <Error />;
+    }
   }
 };
 

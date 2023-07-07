@@ -1,7 +1,3 @@
-@import 'variables.scss';
-@import 'functions.scss';
-@import 'mixins.scss';
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,7 +5,11 @@
   width: 100%;
   padding: 20px;
 
-  @include tablet-and-more {
+  @include tablet-only {
+    padding: 40px 50px;
+  }
+
+  @include desktop-and-more {
     padding: 40px 100px;
   }
 
@@ -41,6 +41,10 @@
 
     &.active {
       text-decoration: underline;
+    }
+
+    &:hover {
+      color: darken(get-color('color-primary'), 30%);
     }
   }
 }

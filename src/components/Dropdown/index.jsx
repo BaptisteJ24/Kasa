@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../../styles/Dropdown.scss';
 
 const Dropdown = ({ name, value, page }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +21,6 @@ const Dropdown = ({ name, value, page }) => {
           } dropdown__chevron`}
         ></i>
       </div>
-
       <div className="dropdown__description">
         {typeof value === 'string' ? (
           value

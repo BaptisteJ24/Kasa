@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 import Banner from '../../components/Banner';
 import Dropdown from '../../components/Dropdown';
-import '../../styles/About.scss';
 
 const about_content = [
   {

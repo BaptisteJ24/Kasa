@@ -1,21 +1,24 @@
-@import 'variables.scss';
-@import 'functions.scss';
-@import 'mixins.scss';
-
 .banner {
   display: flex;
   padding: 0 0 0 16px;
   align-items: center;
   margin: 20px;
-  background: url('../assets/home_page_banner.png') no-repeat center/cover;
+  background: url('./../../assets/home_page_banner.png') no-repeat center/cover;
   height: 110px;
   border-radius: 25px;
   position: relative;
   z-index: 2;
 
+  @include tablet-only {
+    margin: 20px 50px;
+  }
+
   @include tablet-and-more {
     justify-content: center;
     height: 225px;
+  }
+
+  @include desktop-and-more {
     margin: 20px 100px;
   }
 

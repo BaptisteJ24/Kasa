@@ -1,0 +1,21 @@
+@import './Shared/variables.scss';
+@import './Shared/functions.scss';
+@import './Shared/mixins.scss';
+@import './Shared/animations.scss';
+
+@import './Base/reset.scss';
+
+@import './Components/Loader.scss';
+@import './Components/Gallery.scss';
+@import './Components/Carousel.scss';
+@import './Components/Dropdown.scss';
+@import './Components/Card.scss';
+@import './Components/Banner.scss';
+
+@import './Layout/Header.scss';
+@import './Layout/Footer.scss';
+
+@import './Pages/Home.scss';
+@import './Pages/About.scss';
+@import './Pages/Housing.scss';
+@import './Pages/Error.scss';

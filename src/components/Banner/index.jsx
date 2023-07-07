@@ -1,5 +1,3 @@
-import '../../styles/Banner.scss';
-
 const Banner = ({ title, page }) => {
   return (
     <div className={`banner ${page}__banner`}>

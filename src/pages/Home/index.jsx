@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Gallery from './../../components/Gallery';
 import Banner from './../../components/Banner';
-import './../../styles/Home.scss';
 
 function Home() {
   useEffect(() => {

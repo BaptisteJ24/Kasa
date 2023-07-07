@@ -1,4 +1,3 @@
-import '../../styles/Card.scss';
 import { Link } from 'react-router-dom';
 
 const Card = ({ housing, page }) => {

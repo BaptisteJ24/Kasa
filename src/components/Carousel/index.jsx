@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../styles/Carousel.scss';
 
 const Carousel = ({ pictures, altText, page }) => {
   const [currentPicture, setCurrentPicture] = useState(0);
