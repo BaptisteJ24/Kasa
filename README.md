@@ -10,6 +10,6 @@ Compétences :
 
 Fait par : Baptiste JAN
 
-Disponible sur : kasa-jan-baptiste.netlify.app
+Disponible sur : https://baptiste-jan-kasa.netlify.app/
 
 Mis à jour le 26/06/23
