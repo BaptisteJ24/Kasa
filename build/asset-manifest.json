@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5284eb69.css",
-    "main.js": "/static/js/main.3ba26b06.js",
-    "static/media/about_page_banner.png": "/static/media/about_page_banner.c6e61514df4a33ce60de.png",
-    "static/media/home_page_banner.png": "/static/media/home_page_banner.74ddf9715c4151ce7462.png",
-    "static/media/logo.svg": "/static/media/logo.357833936471794ed156d04fe41d6f0d.svg",
-    "static/media/logo_white.svg": "/static/media/logo_white.8bb3e8783bee73f8efb4d4fe85eef268.svg",
-    "index.html": "/index.html",
-    "static/media/kasa_icon.svg": "/static/media/kasa_icon.ddd291b73e03de112bda25f10f010287.svg",
-    "main.5284eb69.css.map": "/static/css/main.5284eb69.css.map",
-    "main.3ba26b06.js.map": "/static/js/main.3ba26b06.js.map"
+    "main.css": "/react-gh-pages/static/css/main.b462d228.css",
+    "main.js": "/react-gh-pages/static/js/main.8c2d54b4.js",
+    "static/media/about_page_banner.png": "/react-gh-pages/static/media/about_page_banner.c6e61514df4a33ce60de.png",
+    "static/media/home_page_banner.png": "/react-gh-pages/static/media/home_page_banner.74ddf9715c4151ce7462.png",
+    "static/media/logo.svg": "/react-gh-pages/static/media/logo.357833936471794ed156d04fe41d6f0d.svg",
+    "static/media/logo_white.svg": "/react-gh-pages/static/media/logo_white.8bb3e8783bee73f8efb4d4fe85eef268.svg",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/kasa_icon.svg": "/react-gh-pages/static/media/kasa_icon.ddd291b73e03de112bda25f10f010287.svg",
+    "main.b462d228.css.map": "/react-gh-pages/static/css/main.b462d228.css.map",
+    "main.8c2d54b4.js.map": "/react-gh-pages/static/js/main.8c2d54b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.5284eb69.css",
-    "static/js/main.3ba26b06.js"
+    "static/css/main.b462d228.css",
+    "static/js/main.8c2d54b4.js"
   ]
 }
