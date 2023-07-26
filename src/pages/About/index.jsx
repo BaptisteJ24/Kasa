@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import Banner from '../../components/Banner';
-import Dropdown from '../../components/Dropdown';
+import Banner from './../../components/Banner';
+import Dropdown from './../../components/Dropdown';
 
 const about_content = [
   {

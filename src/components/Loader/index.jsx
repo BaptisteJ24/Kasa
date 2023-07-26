@@ -1,4 +1,4 @@
-import icon from '../../assets/kasa_icon.svg';
+import icon from './../../assets/kasa_icon.svg';
 
 const Loader = () => {
   return (

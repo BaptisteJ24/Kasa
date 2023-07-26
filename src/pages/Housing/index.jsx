@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Error from '../Error';
-import Carousel from '../../components/Carousel';
-import Dropdown from '../../components/Dropdown';
-import Loader from '../../components/Loader';
-import { getDataById } from '../../utils/get';
+import Error from './../Error';
+import Carousel from './../../components/Carousel';
+import Dropdown from './../../components/Dropdown';
+import Loader from './../../components/Loader';
+import { getDataById } from './../../utils/get';
 
 const Housing = () => {
   const { housingId } = useParams();

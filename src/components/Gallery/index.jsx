@@ -1,6 +1,6 @@
 import React from 'react';
-import { getData } from '../../utils/get';
-import Card from '../Card';
+import { getData } from './../../utils/get';
+import Card from './../Card';
 
 const housing = await getData('/data.json');
 
