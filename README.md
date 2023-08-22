@@ -1,4 +1,4 @@
-# Projet_11_Kasa
+# Kasa
 
 Mission : Développez une application Web avec React et React Router
 
